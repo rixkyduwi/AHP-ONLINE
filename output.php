@@ -78,21 +78,21 @@
 		<tfoot>
 			<tr>
 				<th colspan="<?php echo ($n+2)?>">Principe Eigen Vector (λ maks)</th>
-				<th><?php echo (round($eigenvektor,5))?></th>
+				<th><?php echo $eigenvektor ?></th>
 			</tr>
 			<tr>
 				<th colspan="<?php echo ($n+2)?>">Consistency Index</th>
-				<th><?php echo (round($consIndex,5))?></th>
+				<th><?php echo $consIndex ?></th>
 			</tr>
 			<tr>
-				<th colspan="<?php echo ($n+2)?>">Consistency Ratio</th>
-				<th><?php echo (round(($consRatio * 100),2))?> %</th>
+				<th colspan="<?php echo ($n+1)?>">Consistency Ratio</th>
+				<th><?php echo $consRatio ?> </th>
 			</tr>
 		</tfoot>
 	</table>
 
 <?php
-	if ($consRatio > 0.1) {
+	if ($consRatio >= 0.1) {
 ?>
 		<div class="ui icon red message">
 			<i class="close icon"></i>
