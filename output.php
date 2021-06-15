@@ -85,8 +85,8 @@
 				<th><?php echo $consIndex ?></th>
 			</tr>
 			<tr>
-				<th colspan="<?php echo ($n+1)?>">Consistency Ratio</th>
-				<th><?php echo $consRatio ?> </th>
+				<th colspan="<?php echo ($n+2)?>">Consistency Ratio</th>
+				<th><?php echo $consRatio ?></th>
 			</tr>
 		</tfoot>
 	</table>
