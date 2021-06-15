@@ -86,7 +86,7 @@
 			</tr>
 			<tr>
 				<th colspan="<?php echo ($n+2)?>">Consistency Ratio</th>
-				<th><?php echo (round(($consRatio * 100),2))?> %</th>
+				<th><?php echo ($consRatio * 100)?></th>
 			</tr>
 		</tfoot>
 	</table>
