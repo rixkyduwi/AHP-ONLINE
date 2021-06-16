@@ -32,7 +32,7 @@
 	<h2 class="ui header">Alternatif</h2>
 
 	<table class="ui celled table">
-		<thead style="borde:1">
+		<thead>
 			<tr>
 				<th class="collapsing">No</th>
 				<th colspan="2">Nama Alternatif</th>

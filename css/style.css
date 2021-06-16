@@ -62,20 +62,20 @@ nav {
 
 body {
 	margin: 0;
-	background: black;
+	background: #fff;
 }
 header, nav, section, footer {
 	padding: 10px 30px;
 	margin: 0;
-	color: #15e26acb;
+	color: #fff;
 }
 header {
-	background: #15e26acb;
+	background: #303030;
   text-align: center;
   padding: 30px;
 }
 nav {
-	background: #15e26acb;
+	background: #666666;
 	padding: 0;
 }
 nav a {
@@ -89,9 +89,7 @@ ul {
 	list-style-type: none;
 	padding: 10px 0 10px 15px;
 }
-li a{
-  color: black;
-}
+
 li:hover {
 	background: white;
 	transition: all .3s ease-in;
@@ -103,11 +101,11 @@ li:hover a {
 }
 
 section {
-	background: #15e26acb;
+	background: white;
   color: black;
   padding: 30px;
 }
 footer {
-	background: #15e26acb;
+	background: #303030;
   text-align: center;
 }

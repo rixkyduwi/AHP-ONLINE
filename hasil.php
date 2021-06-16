@@ -122,16 +122,8 @@ include('header.php');
 
 
 			?>
-			
 		</tbody>
-		
 	</table>
-	<div><button onclick="download()">download excell</button>
-<script>
-function download(){
-	
-}
-</script></div>
 </section>
 
 <?php include('footer.php'); ?>

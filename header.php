@@ -4,11 +4,14 @@
 	<meta charset="UTF-8">
 	<title>SPK metode AHP</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+
 </head>
 
 <body>
 <header style="background-color: green" >
-	<h1 style="justify-content: center;">SPK dengan metode AHP</h1>
+	<h1 style="justify-content: center; color: white">SPK dengan metode AHP</h1>
             <ul style="color: black;"  class="navlist nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
                 <li><a  style="color: black;" href="index.php" class="nav-link px-3">Home</a></li>
                 <li><a   style="color: black;" href="kriteria.php" class="nav-link px-3">Kriteria<br>

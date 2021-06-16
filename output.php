@@ -78,15 +78,15 @@
 		<tfoot>
 			<tr>
 				<th colspan="<?php echo ($n+2)?>">Principe Eigen Vector (λ maks)</th>
-				<th><?php echo $eigenvektor ?></th>
+				<th><?php echo (round($eigenvektor,5))?></th>
 			</tr>
 			<tr>
 				<th colspan="<?php echo ($n+2)?>">Consistency Index</th>
-				<th><?php echo $consIndex ?></th>
+				<th><?php echo (round($consIndex,5))?></th>
 			</tr>
 			<tr>
 				<th colspan="<?php echo ($n+2)?>">Consistency Ratio</th>
-				<th><?php echo $consRatio ?></th>
+				<th><?php echo $consRatio?> </th>
 			</tr>
 		</tfoot>
 	</table>
@@ -113,7 +113,28 @@
 				Kembali
 			</button>
 		</a>
+		<?php
+	}else if ($consRatio < 0.1) {
+?>
+		<div class="ui icon blue message">
+			<i class="close icon"></i>
+			<i class="circle icon"></i>
+			<div class="content">
+				<div class="header">
+					Consisten!!!
+				</div>
+				<p>Selamat Nilai yg anda inputkan konsisten...</p>
+			</div>
+		</div>
 
+		<br>
+
+		<a href='javascript:history.back()'>
+			<button class="ui left labeled icon button">
+				<i class="left arrow icon"></i>
+				Kembali
+			</button>
+		</a>
 <?php
 	} else {
 
