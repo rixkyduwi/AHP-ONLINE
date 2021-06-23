@@ -1,33 +1,14 @@
 <?php
-class Config {
-  private $host = "localhost";
-  private $db_name = "ahp";
-  private $username = "root";
-  private $password = "";
-  public $conn;
-
-  public function getConnection() {
-    $this->conn = null;
-    try {
-      $this->conn = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->db_name, $this->username, $this->password);
-    } catch (PDOException $exception) {
-      echo "Connection error: " . $exception->getMessage();
-    }
-    return $this->conn;
-  }
-}
-
-?>
-<?php
+include_once 'config.php';
 
 $config = new Config();
 $db = $config->getConnection();
 
 if ($_POST) {
-    include('config.php');
+    include_once 'ambiluser.php';
     $login = new Login($db);
     $login->userid = $_POST['username'];
-    $login->passid = md5($_POST['password']);
+    $login->passid = ($_POST['password']);
     if ($login->login()) {
         echo "<script>location.href='index.php'</script>";
     } else {
@@ -40,8 +21,8 @@ if ($_POST) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>System Pendukung Keputusan Tema Skripsi </title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>System Pendukung Keputusan Tema Skripsi</title>
+    <link rel="stylesheet" href="css/bootstrap2.min.css">
     <link rel="stylesheet" href="css/sweetalert.css">
     <link rel="stylesheet" href="css/stylelogin.css">
 </head>
@@ -50,7 +31,7 @@ if ($_POST) {
         <div class="row">  
             <div class="col-md-4"></div>
             <div class="col-md-4">
-                <form action="<?=$_SERVER['REQUEST_URL']?>" method="POST">
+                <form action="<?=$_SERVER['REQUEST_URI']?>" method="POST">
                     <div class="panel panel-dark login-box">
                         <div class="panel-heading"><h3 class="text-center">Silahkan Login</h3></div>
                         <div class="panel-body">
@@ -66,7 +47,6 @@ if ($_POST) {
                         <div class="panel-footer">
                             <button type="submit" class="btn btn-dark raised btn-block">Login</button>
                             <br>
-                            <p class="text-center">teknik informatika</p>
                         </div>
                     </div>
                 </form>
