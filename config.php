@@ -18,4 +18,4 @@
 		echo "Tidak dapat menemukan database";
 		exit();
 	}
-?>
+	
