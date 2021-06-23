@@ -89,7 +89,12 @@ function getJumlahAlternatif() {
 
 	return $jmlData;
 }
-
+function jml25(){
+	include('config.php');
+	$query  = "SELECT count(nilai) FROM pv_alternatif where id_alternatif=25";
+	$result = mysqli_query($koneksi, $query);
+	echo $result;
+}
 // mencari jumlah kriteria
 function getJumlahKriteria() {
 	include('config.php');
@@ -399,7 +404,7 @@ function showTabelPerbandingan($jenis,$kriteria) {
 	<table class="ui celled selectable collapsing table">
 		<thead>
 			<tr>
-				<th colspan="2">pilih yang lebih penting</th>
+				<th colspan="2">pilih yang lebih penting/besar </th>
 				<th>nilai perbandingan</th>
 			</tr>
 		</thead>

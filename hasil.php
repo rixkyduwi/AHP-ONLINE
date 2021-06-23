@@ -25,6 +25,7 @@ for ($x=0; $x <= ($jmlAlternatif-1); $x++) {
 	}
 }
 
+
 // update nilai ranking
 for ($i=0; $i <= ($jmlAlternatif-1); $i++) { 
 	$id_alternatif = getAlternatifID($i);
@@ -36,18 +37,21 @@ for ($i=0; $i <= ($jmlAlternatif-1); $i++) {
 	}
 }
 
+
+$jml=jml25();
 include('header.php');
 
 ?>
+
 
 <section class="content">
 	<h2 class="ui header">Hasil Perhitungan</h2>
 	<table class="ui celled table">
 		<thead>
 		<tr>
-			<th>Overall Composite Height</th>
-			<th>Priority Vector (rata-rata)</th>
+			<th>kriteria\alternatif</th>
 			<?php
+			
 			for ($i=0; $i <= (getJumlahAlternatif()-1); $i++) { 
 				echo "<th>".getAlternatifNama($i)."</th>\n";
 			}
@@ -55,32 +59,39 @@ include('header.php');
 		</tr>
 		</thead>
 		<tbody>
-
 		<?php
 			for ($x=0; $x <= (getJumlahKriteria()-1) ; $x++) { 
 				echo "<tr>";
 				echo "<td>".getKriteriaNama($x)."</td>";
-				echo "<td>".round(getKriteriaPV(getKriteriaID($x)),5)."</td>";
+				
 
 				for ($y=0; $y <= (getJumlahAlternatif()-1); $y++) { 
 					echo "<td>".round(getAlternatifPV(getAlternatifID($y),getKriteriaID($x)),5)."</td>";
 				}
-
-
 				echo "</tr>";
 			}
 		?>
 		</tbody>
-
 		<tfoot>
 		<tr>
-			<th colspan="2">Total</th>
+			<th>total</th>
+			<?php
+			$jmlhasil= jmlhasil();
+			for ($i=0; $i <= ($jmlAlternatif-1); $i++) { 
+				echo "<th>".$jml."</th>";
+			}
+			?>
+		</tr>
+		<tr>
+			<th>rata-rata</th>
 			<?php
 			for ($i=0; $i <= ($jmlAlternatif-1); $i++) { 
 				echo "<th>".round($nilai[$i],5)."</th>";
 			}
 			?>
 		</tr>
+		<tr>
+	</tr>
 		</tfoot>
 
 	</table>
@@ -112,18 +123,14 @@ include('header.php');
 					}
 
 					?>
-
 					<td><?php echo $row['nama'] ?></td>
 					<td><?php echo $row['nilai'] ?></td>
 				</tr>
 
 				<?php	
 				}
-
-
 			?>
 		</tbody>
 	</table>
 </section>
-
 <?php include('footer.php'); ?>

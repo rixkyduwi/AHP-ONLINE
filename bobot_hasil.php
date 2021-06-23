@@ -75,20 +75,6 @@
 ?>
 
 		</tbody>
-		<tfoot>
-			<tr>
-				<th colspan="<?php echo ($n+2)?>">Principe Eigen Vector (λ maks)</th>
-				<th><?php echo (round($eigenvektor,5))?></th>
-			</tr>
-			<tr>
-				<th colspan="<?php echo ($n+2)?>">Consistency Index</th>
-				<th><?php echo (round($consIndex,5))?></th>
-			</tr>
-			<tr>
-				<th colspan="<?php echo ($n+2)?>">Consistency Ratio</th>
-				<th><?php echo (round(($consRatio * 100),2))?> %</th>
-			</tr>
-		</tfoot>
 	</table>
 
 

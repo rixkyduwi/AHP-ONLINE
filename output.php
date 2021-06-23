@@ -129,12 +129,12 @@
 
 		<br>
 
-		<a href='javascript:history.back()'>
-			<button class="ui left labeled icon button">
-				<i class="left arrow icon"></i>
-				Kembali
-			</button>
-		</a>
+		<a href="bobot.php?c=1">
+	<button class="ui right labeled icon button" style="float: right;">
+		<i class="right arrow icon"></i>
+		Lanjut
+	</button>
+	</a>
 <?php
 	} else {
 
